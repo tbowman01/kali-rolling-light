@@ -1,12 +1,12 @@
 {
-  //"extends": ["config:base", "schedule:nonOfficeHours"]
   "extends": ["config:base"]
-
   "packageRules": [
     {
       "updateTypes": ["minor", "patch", "pin", "digest"],
       "depTypeList": ["devDependencies"],
-      "automerge": true
-    }
+      "automerge": true,
+      "automergeType": "pr-comment",
+      "automergeComment": "bors: r+"
+   }
   ]
 }
